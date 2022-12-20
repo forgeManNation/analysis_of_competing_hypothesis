@@ -5,13 +5,47 @@ const initialState = {
   analyses: [
     {
       analysisName: "Kdo zavraždil J. F. Kenedyho?",
-      tableHeadData: [],
-      tableBodyData: [],
-    },
-    {
-      analysisName: "Je ve fotbale lepší silná obrana nebo útok?",
-      tableHeadData: [],
-      tableBodyData: [],
+      tableHeadData: [
+        {
+          name: "Lee Harvey Oswald, samotný",
+          information: "Bývalý příslušník námořní pěchoty Spojených států",
+          probabilityNumber: 0,
+        },
+        {
+          name: "Oswald - za pomoci Kuby nebo SSSR",
+          information:
+            "Tato hypotéza předpokládá že za útokem nemohl stát Oswald sám, ale dostal pomoc či přímo instrukce z Kuby nebo ze SSSR",
+          probabilityNumber: 0,
+        },
+        {
+          name: "Někdo jiný",
+          information: "Někdo se za Oswalda pouze vydával.",
+          probabilityNumber: 0,
+        },
+      ],
+      tableBodyData: [
+        {
+          name: "Do Kennedyho byli vystřeleny tři střely",
+          type: "Informace zveřejněná FBI",
+          credibility: "High",
+          relevance: "Medium",
+          inputCells: ["C", "C", "N"],
+        },
+        {
+          name: "Do Kennedyho bylo stříleno z okna",
+          type: "Novinami zveřejněná informace",
+          credibility: "High",
+          relevance: "Low",
+          inputCells: ["N", "N", "N"],
+        },
+        {
+          name: "Sovětský leadeship byl podle agentů CIA po atentátu vystrašený",
+          type: "Zpráva CIA",
+          credibility: "Low",
+          relevance: "High",
+          inputCells: ["C", "I", "N"],
+        },
+      ],
     },
   ],
 };

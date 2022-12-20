@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./sidebar.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { auth } from "../../firebase";
@@ -22,6 +22,18 @@ const Sidebar = () => {
     dispatch(changeAddNewAnalysisInput({ newInputState: true }));
   }
 
+  const [imageValid, setimageValid] = useState(true);
+
+  useEffect(() => {
+    setimageValid(true);
+  }, [user.photoUrl]);
+
+  function onImageError(img) {
+    setimageValid(false);
+  }
+
+  const userIcon = <i class="bi bi-person-circle"></i>;
+
   return (
     <div class="sidebar main d-flex flex-column flex-shrink-0 p-3 text-dark ">
       <a
@@ -42,13 +54,22 @@ const Sidebar = () => {
           data-bs-toggle="dropdown"
           aria-expanded="false"
         >
-          <img
-            src={user.photoUrl}
-            alt="user"
-            class="rounded-circle me-2"
-            width="32"
-            height="32"
-          />
+          {imageValid ? (
+            <img
+              onError={onImageError}
+              src={user.photoUrl || "triggerError"}
+              alt={""}
+              class="rounded-circle me-2"
+              width="32"
+              height="32"
+            />
+          ) : (
+            <span>
+              {userIcon}
+              &nbsp;
+            </span>
+          )}
+
           <strong>{user.displayName || user.email}</strong>
         </a>
         <ul

@@ -10,6 +10,7 @@ const AuthenticatedApp = () => {
   return (
     <div className="App d-flex flex-row">
       <Sidebar></Sidebar>
+
       <Table></Table>
 
       {/* Modals */}
