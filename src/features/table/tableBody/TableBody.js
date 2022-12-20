@@ -72,8 +72,8 @@ const TableBody = () => {
               //case compatible
               case "C":
                 return (
-                  <td key={"compatible" + cellIndex} className="inputCell">
-                    Compatible
+                  <td key={"comaptible" + cellIndex} className="inputCell">
+                    C
                     <span
                       className="editIcon"
                       onClick={() => {
@@ -94,7 +94,7 @@ const TableBody = () => {
               case "N":
                 return (
                   <td key={"neutral" + cellIndex} className="inputCell">
-                    Neutral
+                    N
                     <span
                       className="editIcon"
                       onClick={() => {
@@ -114,8 +114,8 @@ const TableBody = () => {
               //case incompatible
               case "I":
                 return (
-                  <td key={"incompatible" + cellIndex} className="inputCell">
-                    Incompatible
+                  <td key={"incomaptible" + cellIndex} className="inputCell">
+                    I
                     <span
                       className="editIcon"
                       onClick={() => {
