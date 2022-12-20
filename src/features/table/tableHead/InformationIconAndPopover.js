@@ -4,7 +4,7 @@ import { Popover, PopoverHeader, PopoverBody } from "reactstrap";
 import { selectTableHeadData } from "../tableSlice";
 
 const InformationIconAndPopover = (props) => {
-  const viewInformationIcon = <i class="bi bi-info-circle-fill"></i>;
+  const viewInformationIcon = <i className="bi bi-info-circle-fill"></i>;
 
   const tableHeadData = useSelector(selectTableHeadData);
   const [popoverToggled, setpopoverToggled] = useState(false);

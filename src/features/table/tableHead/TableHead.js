@@ -13,7 +13,7 @@ const TableHead = () => {
 
   const tableHeadData = useSelector(selectTableHeadData);
 
-  const deleteHypothesisIcon = <i class="bi bi-trash3-fill "></i>;
+  const deleteHypothesisIcon = <i className="bi bi-trash3-fill "></i>;
 
   function deleteHypothesis(index) {
     if (window.confirm("do you really want to delete the hypothesis")) {
@@ -21,7 +21,7 @@ const TableHead = () => {
     }
   }
 
-  const editIcon = <i class=" bi bi-pen-fill"></i>;
+  const editIcon = <i className=" bi bi-pen-fill"></i>;
 
   return (
     <thead>

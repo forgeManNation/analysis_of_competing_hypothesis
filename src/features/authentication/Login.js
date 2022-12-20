@@ -89,7 +89,7 @@ const Login = () => {
         {errorMessage !== "" ? (
           <div className="errorMessageContainer">
             <p className="errorMessage">
-              <i class="bi bi-exclamation-circle-fill"></i>
+              <i className="bi bi-exclamation-circle-fill"></i>
               &nbsp;
               {errorMessage}
             </p>

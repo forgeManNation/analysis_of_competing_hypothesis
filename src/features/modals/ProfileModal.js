@@ -90,7 +90,7 @@ const ProfileModal = () => {
                 setuserProfilePicture(e.target.value);
               }}
               className="p-1"
-              value={userProfilePicture}
+              value={userProfilePicture || ""}
             ></input>
             &nbsp;
             <p>Change username</p>
@@ -100,7 +100,7 @@ const ProfileModal = () => {
                 setdisplayName(e.target.value);
               }}
               className="p-1"
-              value={displayName}
+              value={displayName || ""}
             ></input>
           </div>
           <div className="modal-footer">

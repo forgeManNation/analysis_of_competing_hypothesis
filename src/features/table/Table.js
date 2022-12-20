@@ -40,10 +40,12 @@ const Table = () => {
   const [addNewColumnButtonTooltipOpen, setaddNewColumnButtonTooltipOpen] =
     useState(false);
 
-  const printerIcon = <i class="bi bi-printer-fill table-alternating-icon"></i>;
+  const printerIcon = (
+    <i className="bi bi-printer-fill table-alternating-icon"></i>
+  );
 
   const informationIcon = (
-    <i class="bi bi-info-circle-fill table-alternating-icon"></i>
+    <i className="bi bi-info-circle-fill table-alternating-icon"></i>
   );
 
   function deleteEvidence() {
@@ -72,33 +74,33 @@ const Table = () => {
   return (
     <>
       <div
-        class="d-flex flex-column justify-content-center tableSegment"
+        className="d-flex flex-column justify-content-center tableSegment"
         ref={tableRef}
       >
         <div>
           <h2 className="analysisNameAboveTable">{analysisName}</h2>
         </div>
-        <div class="tableContainer d-flex flex-direction-row justify-content-center ">
+        <div className="tableContainer d-flex flex-direction-row justify-content-center ">
           <table className="table">
             <TableHead></TableHead>
             <TableBody></TableBody>
           </table>
 
-          <div class="nonprint align-items-center d-flex flex-column justify-content-center m-4">
+          <div className="nonprint align-items-center d-flex flex-column justify-content-center m-4">
             {/* add new column */}
             <div
               role="button"
               id="addNewColumnButton"
-              class="table-alternating-button"
+              className="table-alternating-button"
               aria-label="add hypotesis"
               data-bs-toggle="modal"
               data-bs-target="#exampleModal"
               onClick={launchHypothesisModal}
             >
-              <i class="bi bi-plus-square-fill table-alternating-icon"></i>
+              <i className="bi bi-plus-square-fill table-alternating-icon"></i>
             </div>
             <Tooltip
-              delay={{ show: "300", hide: "0" }}
+              delay={300}
               placement="bottom"
               isOpen={addNewColumnButtonTooltipOpen}
               target="addNewColumnButton"
@@ -116,14 +118,14 @@ const Table = () => {
             <div
               role="button"
               id="deleteLastHypothesisButton"
-              class="table-alternating-button"
+              className="table-alternating-button"
               aria-label="delete last hypotesis"
               onClick={deleteHypothesis}
             >
-              <i class="bi bi-dash-square-fill table-alternating-icon"></i>
+              <i className="bi bi-dash-square-fill table-alternating-icon"></i>
             </div>
             <Tooltip
-              delay={{ show: "300", hide: "0" }}
+              delay={300}
               placement="bottom"
               isOpen={deleteLastHypothesisButtonTooltipOpen}
               target="deleteLastHypothesisButton"
@@ -138,19 +140,19 @@ const Table = () => {
           </div>
         </div>
         <div className="nonprint">
-          <div class="align-items-center d-flex justify-content-center ">
+          <div className="align-items-center d-flex justify-content-center ">
             {/* add new row */}
             <div
               role="button"
               id="addNewRowButton"
-              class="table-alternating-button"
+              className="table-alternating-button"
               aria-label="add evidence"
               onClick={launchEvidenceModal}
             >
-              <i class="bi bi-plus-square-fill table-alternating-icon"></i>
+              <i className="bi bi-plus-square-fill table-alternating-icon"></i>
             </div>
             <Tooltip
-              delay={{ show: "300", hide: "0" }}
+              delay={300}
               placement="bottom"
               isOpen={addNewRowButtonTooltipOpen}
               target="addNewRowButton"
@@ -165,15 +167,15 @@ const Table = () => {
             <div
               role="button"
               id="deleteLastRowButton"
-              class="table-alternating-button"
+              className="table-alternating-button"
               aria-label="delete last evidence"
               onClick={deleteEvidence}
             >
-              <i class="bi bi-dash-square-fill table-alternating-icon"></i>
+              <i className="bi bi-dash-square-fill table-alternating-icon"></i>
             </div>
           </div>
           <Tooltip
-            delay={{ show: "300", hide: "0" }}
+            delay={300}
             placement="bottom"
             isOpen={deleteLastRowButtonTooltipOpen}
             target="deleteLastRowButton"

@@ -32,24 +32,24 @@ const Sidebar = () => {
     setimageValid(false);
   }
 
-  const userIcon = <i class="bi bi-person-circle"></i>;
+  const userIcon = <i className="bi bi-person-circle"></i>;
 
   return (
-    <div class="sidebar main d-flex flex-column flex-shrink-0 p-3 text-dark ">
+    <div className="sidebar main d-flex flex-column flex-shrink-0 p-3 text-dark ">
       <a
         href="/"
-        class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none"
+        className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none"
       >
-        <span class="fs-4">Overview of your analyses</span>
+        <span className="fs-4">Overview of your analyses</span>
       </a>
       <hr />
       <SidebarAnalysesSegment></SidebarAnalysesSegment>
 
       <hr />
-      <div class="dropdown">
+      <div className="dropdown">
         <a
           href="#"
-          class="d-flex align-items-center text-dark text-decoration-none dropdown-toggle"
+          className="d-flex align-items-center text-dark text-decoration-none dropdown-toggle"
           id="dropdownUser1"
           data-bs-toggle="dropdown"
           aria-expanded="false"
@@ -59,7 +59,7 @@ const Sidebar = () => {
               onError={onImageError}
               src={user.photoUrl || "triggerError"}
               alt={""}
-              class="rounded-circle me-2"
+              className="rounded-circle me-2"
               width="32"
               height="32"
             />
@@ -73,24 +73,24 @@ const Sidebar = () => {
           <strong>{user.displayName || user.email}</strong>
         </a>
         <ul
-          class="dropdown-menu dropdown-menu-dark text-small shadow"
+          className="dropdown-menu dropdown-menu-dark text-small shadow"
           aria-labelledby="dropdownUser1"
         >
           <li>
-            <a class="dropdown-item" onClick={addNewProject}>
+            <a className="dropdown-item" onClick={addNewProject}>
               New project...
             </a>
           </li>
           <li>
-            <a class="dropdown-item" onClick={openChangeProfileModal}>
+            <a className="dropdown-item" onClick={openChangeProfileModal}>
               Profile
             </a>
           </li>
           <li>
-            <hr class="dropdown-divider" />
+            <hr className="dropdown-divider" />
           </li>
           <li>
-            <a class="dropdown-item" onClick={signOut}>
+            <a className="dropdown-item" onClick={signOut}>
               Sign out
             </a>
           </li>

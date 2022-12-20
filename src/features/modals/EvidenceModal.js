@@ -62,16 +62,14 @@ const EvidenceModal = () => {
     let evidenceModal = modalRef.current;
 
     //when evidence modal is opened data are loaded into its states
-    setname(evidenceModalData.name ? evidenceModalData.name : name);
+    setname(evidenceModalData.name ? evidenceModalData.name : "");
     setcredibility(
-      evidenceModalData.credibility
-        ? evidenceModalData.credibility
-        : credibility
+      evidenceModalData.credibility ? evidenceModalData.credibility : "Medium"
     );
     setrelevance(
-      evidenceModalData.relevance ? evidenceModalData.relevance : relevance
+      evidenceModalData.relevance ? evidenceModalData.relevance : "Medium"
     );
-    settype(evidenceModalData.type ? evidenceModalData.type : type);
+    settype(evidenceModalData.type ? evidenceModalData.type : "");
 
     if (evidenceModalData.open) {
       const bsModal = new Modal(evidenceModal, {
@@ -90,8 +88,8 @@ const EvidenceModal = () => {
 
   //close and submit modal
   function closeAndSumbit() {
-    dispatch(changeModalEvidenceOpen({ open: false }));
     submitEvidence();
+    dispatch(changeModalEvidenceOpen({ open: false }));
   }
 
   return (
@@ -129,7 +127,7 @@ const EvidenceModal = () => {
               onLoad={changeCredibility}
               onChange={changeCredibility}
               value={credibility}
-              class="form-control form-control-sm"
+              className="form-control form-control-sm"
             >
               <option>High</option>
               <option>Medium</option>
@@ -140,7 +138,7 @@ const EvidenceModal = () => {
             <select
               onChange={changeRelevance}
               value={relevance}
-              class="form-control form-control-sm"
+              className="form-control form-control-sm"
             >
               <option>High</option>
               <option>Medium</option>

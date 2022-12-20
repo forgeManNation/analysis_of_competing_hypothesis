@@ -42,7 +42,7 @@ const CompatibilityInput = (props) => {
         C
       </button>
       <Tooltip
-        delay={{ show: "400", hide: "0" }}
+        delay={400}
         placement="bottom"
         isOpen={compatibleTooltipOpen}
         target={"compatible" + tableRowindex + cellIndex}
@@ -67,7 +67,7 @@ const CompatibilityInput = (props) => {
         N
       </button>
       <Tooltip
-        delay={{ show: "400", hide: "0" }}
+        delay={400}
         placement="bottom"
         isOpen={neutralTooltipOpen}
         target={"neutral" + tableRowindex + cellIndex}
@@ -92,7 +92,7 @@ const CompatibilityInput = (props) => {
         I
       </button>
       <Tooltip
-        delay={{ show: "400", hide: "0" }}
+        delay={400}
         placement="bottom"
         isOpen={incompatibleTooltipOpen}
         target={"incompatible" + tableRowindex + cellIndex}

@@ -97,7 +97,7 @@ const ProbabilityNumbersRow = () => {
 
   return (
     <>
-      {probabilitySumaList.map((probabilitySuma) => {
+      {probabilitySumaList.map((probabilitySuma, index) => {
         if (probabilitySuma !== undefined) {
           const probabilitySumaPercentage =
             (probabilitySuma / probabilitiesSuma) * 100;
@@ -109,9 +109,13 @@ const ProbabilityNumbersRow = () => {
             probabilitySumaPercentageFloored = 0;
           }
 
-          return <th>{probabilitySumaPercentageFloored + "%"}</th>;
+          return (
+            <th key={"probailityNumbersRow" + index}>
+              {probabilitySumaPercentageFloored + "%"}
+            </th>
+          );
         } else {
-          return <th>Can't be counted</th>;
+          return <th key={"probailityNumbersRow" + index}>Can't be counted</th>;
         }
       })}
     </>

@@ -20,20 +20,22 @@ const SidebarAnalysesSegment = () => {
   const activeAnalysisIndex = useSelector(selectActiveAnalysisIndex);
   const dispatch = useDispatch();
 
-  const deleteIcon = <i class=" bi bi-trash-fill"></i>;
+  const deleteIcon = <i className=" bi bi-trash-fill"></i>;
 
   //continue on getting data from redux
   const addNewAnalysisInputOpen = useSelector(selectAddNewAnalysisInputOpen);
   const addAnalysisIcon = (
-    <i class="bi bi-plus-circle-fill sidebarIcon" role="button"></i>
+    <i className="bi bi-plus-circle-fill sidebarIcon" role="button"></i>
   );
   const removeAnalysisIcon = (
-    <i class="bi bi-dash-circle-fill sidebarIcon" role="button"></i>
+    <i className="bi bi-dash-circle-fill sidebarIcon" role="button"></i>
   );
 
-  const checkMarkIcon = <i class="bi bi-check sidebarIcon" role="button"></i>;
+  const checkMarkIcon = (
+    <i className="bi bi-check sidebarIcon" role="button"></i>
+  );
 
-  const xMarkIcon = <i class="bi bi-x sidebarIcon" role="button"></i>;
+  const xMarkIcon = <i className="bi bi-x sidebarIcon" role="button"></i>;
 
   const [newAnalysisInputValue, setnewAnalysisInputValue] = useState("");
   function addNewAnalysis() {
@@ -93,17 +95,18 @@ const SidebarAnalysesSegment = () => {
     dispatch(changeModalNameOpen({ open: true, index: index, name: name }));
   }
 
-  const editIcon = <i class=" bi bi-pen-fill"></i>;
+  const editIcon = <i className=" bi bi-pen-fill"></i>;
 
   return (
     <div className="analysesListContainer">
-      <ul class="nav nav-pills flex-column mb-auto analysesList">
+      <ul className="nav nav-pills flex-column mb-auto analysesList">
         {analyses.map((analysis, index) => (
           <li
+            key={"sidebarAnalysisSegmentMenu" + index}
             onClick={() => {
               dispatch(changeActiveAnalysisIndex({ index: index }));
             }}
-            class="nav-item"
+            className="nav-item"
           >
             <a
               href="#"
